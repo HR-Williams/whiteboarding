@@ -1,0 +1,36 @@
+given an array
+write an algorithm
+return array with duplicates removed
+removes duplicates from an array
+one time without don't use filter 
+then do it with thesolve with filter
+solve with and without recursion
+
+// Input: [7, 9, "hi", 12, "hi", 7, 53]
+
+// Output: [7, 9, "hi", 12, 53]
+
+function dedupe(arr) {
+	let newArr = [];
+	for (i=0; i<arr.length; i++) {
+		if(!newArr.includes(arr[i])){
+  	newArr.push(arr[i])
+  	}
+	}
+  return newArr;
+}
+
+function dedupe(arr) { 
+	return arr.filter((element, index) => arr.indexOf(element) === index):
+}
+
+const arrDeduper = (arr, i=0, newArr) => {
+	if (i>=arr.length) {
+  	return newArr;
+  } else if (!newArr.includes(arr[i])) {
+  	newArr.push(arr[i])
+  }
+  return arrDeduper(arr, i+1, newArr)
+}
+
+//note: my time ran out vefore I could write my termination case
